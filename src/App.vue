@@ -1,18 +1,8 @@
 <script setup lang="ts">
-//
-//   import {onMounted} from "vue";
-//
-//   import {useCurrencyStore} from "@/store";
-//   const currencyStore = useCurrencyStore();
-//
-//   onMounted(() => {
-//     currencyStore.fetchCurrencyRates();
-//   })
+  import Header from '@/components/Header.vue'
 </script>
 
 <template>
+  <Header/>
   <router-view />
 </template>
-
-<style scoped>
-</style>

@@ -1,18 +1,3 @@
-import {defineStore} from "pinia";
-import axios from '@/services/axios';
-
-export const useCurrencyStore = defineStore('currency',{
-    state: () => ({
-        currencies: []
-    }),
-    actions: {
-        async fetchCurrencyRates() {
-            try {
-                const response = await axios.get('?json');
-                this.currencies = response.data;
-            } catch (error) {
-                console.error(error);
-            }
-        }
-    }
-})
+export {useCurrencyStore} from "@/store/currency.ts";
+export {useEditedStore} from "@/store/edited-currency.ts";
+export {useSearchCurrencyStore} from "@/store/search-currency.ts";
